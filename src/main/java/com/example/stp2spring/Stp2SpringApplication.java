@@ -1,4 +1,4 @@
-package com.example.stp2_spring;
+package com.example.stp2spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Форма онлайн-записи на СТО</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="main">
+				<h2>Онлайн-запись на услуги СТО</h2>
+				<img id="picture" src="res/sto.jpg" width="800" height="320"></img>
+				
+				<p>
+					<button onclick="Shift(0)">Влево</button>
+					<button onclick="Shift(1)">Центрировать</button>
+					<button onclick="Shift(2)">Вправо</button>
+
+					<script src="script.js"></script>
+				</p>
+			</div>
+		</header>
+
+		<section class="site-content">
+			<div>
+				<form action="form_submit.html">
+					<p>
+						<label for="name">Укажите свои ФИО:</label></br>
+						<input type="text" name="name" required/>
+					</p>
+
+					<p>
+						<label for="telephone">Укажите свой контактный телефон:</label></br>	
+						<input type="tel" name="telephone" required/>
+					</p>
+
+					<p>
+						<label for="date">Выберите желаемую дату записи:</label></br>
+						<input type="date" name="date" required/>
+					</p>
+
+					<p>
+						<label for="brand">Выберите марку автомобиля:</label></br>
+						<select name="dropdown" id="brands_select" class="dropdown" onclick="updateForm()">
+							<option id="br_val_0" default required>none</option>
+							<option id="br_val_1">1</option>
+							<option id="br_val_2">2</option>
+							<option id="br_val_3">3</option>
+						</select>
+						
+					</p>
+					
+					<!--><script src="ajax.js"></script><!-->
+
+					<p>
+						<label for="problem">Опишите проблему или желаемую услугу:</label></br>
+						<textarea name="problem" placeholder="Не более 200 символов" maxlength="200" required></textarea>
+					</p>
+
+					<p>
+						<input type="submit" method="post" name="Записаться"/>
+					</p>
+				</form>
+
+				<form action="last_req.html">
+					<p>
+						<input type="submit" value="Показать последний запрос"/>
+					</p>
+				</form>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+	      <div class="container">
+	        <p>© Баранин М.И., 2021</p>
+	        <p>Форма онлайн-записи на СТО</p>
+	      </div>
+	    </footer>
+	</body>
+</html>
