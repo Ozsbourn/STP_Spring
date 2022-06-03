@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.stp2spring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,14 +11,13 @@ import java.io.IOException;
 
 @Controller
 public class SController {
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String index() {
-        return "index";
+        return "index.html";
     }
 
     @RequestMapping("/last_req.html?")
-    public String last_req(
-                           Model model) {
+    public String last_req(Model model) {
         try (BufferedReader reader = new BufferedReader(new FileReader("FormData.dat"))) {
             String buf = new String();
             String[] str = new String[5];
